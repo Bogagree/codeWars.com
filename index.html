@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codewars.com</title>
+</head>
+
+<body>
+    <h1>Kata 8kyu</h1>
+</body>
+
+</html>
+
+<script>
+    // function removeChar(str) {
+    //     //You got this!
+    //     if (str.length == 2) { return str }
+    //     else {
+    //         var string1 = str.slice(1, -1)
+    //         return string1
+    //     }
+    // };
+
+    // console.log(removeChar('eloquent'))
+
+function wrap(height, width, length) {
+ 
+  let ribbonLength;
+  let whoIsHeigth = [height*width, height*length, width*length];
+  let maxSide = Math.max.apply(null, whoIsHeigth);
+  if (height * width == maxSide) {
+    ribbonLength = length*4 + width*2 + height*2 + 20;
+  } else if (height*length == maxSide) {
+     ribbonLength = length*2 + width*4 + height*2 + 20;
+  } else {ribbonLength = length*2 + width*2 + height*4 + 20;}
+    ;
+    return ribbonLength
+}
+    console.log(wrap(17,32,11));
+
+    </script>
