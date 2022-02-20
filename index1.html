@@ -30,7 +30,7 @@
        
     if (x > y) {
       seasonResult1 = seasonResult1 + 3;
-      console.log(seasonResult1)
+      // console.log(seasonResult1)
     }
     else if (x == y) {
       seasonResult1 = seasonResult1 + 1;
@@ -60,4 +60,26 @@ console.log(findNextSquare(319225));
 console.log(Number.isInteger(Math.sqrt(319225)));
 
 console.log(findNextSquare(15241383936))
+
+
+function evensAndOdds(num){
+  //your code here
+  console.log(typeof(num));
+  
+  if (num % 2 === 0) { return num.toString(2) }
+  else return num.toString(16)
+}
+
+console.log(evensAndOdds (19298789965789709869882))
+
+function longest(s1, s2) {
+
+  let s3 = s1+s2;  
+  let uniqueChars = [...new Set(s3.split(''))]; // перевод строки в массив и удаление дубликатов
+ return  uniqueChars.sort().join('') // сортировка и перевод массива в строку
+}
+
+console.log(longest('loopingisfunbutdangerous', 'lessdangerousthancoding'));
+  
+
     </script>
