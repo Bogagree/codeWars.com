@@ -81,5 +81,41 @@ function longest(s1, s2) {
 
 console.log(longest('loopingisfunbutdangerous', 'lessdangerousthancoding'));
   
+// const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('') - чужое короткое решение
+
+if (99 == "99") {
+console.log("A number equals a string!");
+} else {
+console.log("No way a number equals a string");
+}
+
+// var text = "YOU SHOULD NEVER SHOUT WHEN TYPING";
+// var presentableText = text.toLowerCase();
+// if (presentableText.length > 0) {
+// alert(presentableText);
+// }
+
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+
+function makeList(arr) {
+   const failureItems = [];
+   for (let i = 0; i < result.failure.length; i++)
+   {
+    failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
+   }
+  return failureItems;
+}
+
+
+const failuresList = makeList(result.failure);
+
+console.log(failuresList)
+
+
+
 
     </script>
