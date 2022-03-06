@@ -116,6 +116,27 @@ const failuresList = makeList(result.failure);
 console.log(failuresList)
 
 
+function isPalindrome(x) {
+  // your code here
+  let x1=x.toLowerCase().split``.reverse().join`` //replace(/[^a-zа-яё\d]/gi, "");
+console.log (x1);
+
+  
+  // if (x == x1.split('').reverse().join('')) 
+  // {return (true)}
+  // else {return false}
+}
+
+isPalindrome('MAdam')
+
+// проверка даты
+function isToday(someDate) {
+
+const today = new Date()
+return someDate.getDate() == today.getDate() &&
+  someDate.getMonth() == today.getMonth() &&
+  someDate.getFullYear() == today.getFullYear()
+}
 
 
     </script>
