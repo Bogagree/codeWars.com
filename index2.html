@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codewars.com</title>
+</head>
+
+<body>
+    <h1>YouTube_Viktor Bogutskii Codewars.com </h1>
+    <h2>Первая задача на стэк</h2>
+</body>
+
+</html>
+
+<script>
+
+//Kata 5 kyu Valid Parentheses
+// решение задачи через внесения данного в Стэк
+
+function validParentheses(str) {
+const stack=[], open=['(','{','['], close=[')','}',']']
+ 
+for (i=0; i<str.length; i++)
+// Сначала проверяю является ли подававемый элемент открывающейся скобкой
+  if (open.includes(str[i])) {
+    // если является, то заношу его в доп.массива stack
+    stack.push(str[i])
+  } else {
+    // если подаваемый эелемнт не открывающаяся скобка, то проверяю его 
+    // равен ли его индекс, индексу последнего элемента в stack
+    if (close.indexOf(str[i]) === open.indexOf(stack[stack.length-1])) {
+        // если да то удаляю последний элемент массива stack
+      stack.pop()
+        }
+        // если нет то возвращаю false
+        else return false
+  }
+  // когда проверены все элементы, проверяю stack - если есть хоть 1 элемент, значит false
+return stack.length === 0
+}
+
+
+console.log(validParentheses('()()()()(()()())()(())()(())(()('))
+// "()()()()(()()())()(())()(())(()(" expected: false
+
+
+
+    </script>
