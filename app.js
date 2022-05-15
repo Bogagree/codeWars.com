@@ -11,7 +11,7 @@ class Kata {
     }
   }
 
-//  8kyu Convert a String to a Number!
+//  8kyu Convert a String to a Number! Return Negative
 
 // Description
 // We need a function that can transform a string into a number. What ways of achieving this do you know?
@@ -24,5 +24,22 @@ class Kata {
   }
 
 
+//8kyu Return Negative
+// 
 
-  
+//   In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+// makeNegative(1);    // return -1
+// makeNegative(-5);   // return -5
+// makeNegative(0);    // return 0
+// makeNegative(0.12); // return -0.12
+
+function makeNegative(num) {
+    // Code?
+    // if (num < 0) {return num} else { return num * -1}
+
+    return num < 0 ? num : -num;
+
+    // return -Math.abs(num);
+
+
+  }
