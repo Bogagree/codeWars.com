@@ -4,14 +4,12 @@
 
 // Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. Write a function to help Bob with this calculation.
 
-class Kata {
-    static getVolumeOfCuboid(length, width, height) {
+
+function g6etVolumeOfCuboid(length, width, height) {
       // your code here
       return length*width*height
-    }
-  }
-
-//  8kyu Convert a String to a Number! Return Negative
+}
+      //  8kyu Convert a String to a Number! Return Negative
 
 // Description
 // We need a function that can transform a string into a number. What ways of achieving this do you know?
@@ -62,3 +60,24 @@ function chain(input, fs) {
       }
     return a
       }
+
+// 7 kyu Don't give me five!
+// In this kata you get the start number and the end number of a region and should return the count of all numbers except numbers with a 5 in it. The start and the end number are both inclusive!
+
+// Examples:
+
+// 1,9 -> 1,2,3,4,6,7,8,9 -> Result 8
+// 4,17 -> 4,6,7,8,9,10,11,12,13,14,16,17 -> Result 12
+// The result may contain fives. ;-)
+// The start number will always be smaller than the end number. Both numbers can be also negative!
+
+
+function dontGiveMeFive(start, end)
+{ let result = 0;
+ for (let i = start; i <= end ; i++)
+   {if (!/5/.test(i)) result++}
+   return result
+ }
+
+
+console.log(dontGiveMeFive(4, 17))
